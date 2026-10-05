@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kopi Lereng | Biji Kopi Sangrai Segar dari Jawa Tengah</title>
+  <meta name="description" content="Biji kopi single origin disangrai setelah pesanan masuk, dikirim ke seluruh Indonesia.">
+  <meta property="og:title" content="Kopi Lereng">
+  <meta property="og:description" content="Biji kopi single origin disangrai setelah pesanan masuk.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="nav">
+    <a href="#" class="logo">Kopi Lereng</a>
+    <nav aria-label="Menu utama">
+      <a href="#keunggulan">Keunggulan</a>
+      <a href="#produk">Produk</a>
+      <a href="#testimoni">Testimoni</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="Keranjang">
+      Keranjang <span id="cartCount">0</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Kopi yang disangrai setelah kamu pesan.</h1>
+      <p>Biji pilihan dari lereng Ungaran, Temanggung, dan Gayo. Sampai di rumahmu maksimal 3 hari setelah sangrai.</p>
+      <a href="#produk" class="btn">Lihat produk</a>
+      <div class="roast" aria-hidden="true">
+        <span>Light</span><span>Medium</span><span>Dark</span>
+      </div>
+    </section>
+
+    <section id="keunggulan" class="section">
+      <h2>Kenapa beli di sini</h2>
+      <ul class="perks">
+        <li><strong>Sangrai on demand</strong>Tidak ada stok mengendap di gudang.</li>
+        <li><strong>Langsung dari petani</strong>Harga adil, asal biji jelas.</li>
+        <li><strong>Kirim ke seluruh Indonesia</strong>Dikemas kedap udara dengan valve.</li>
+        <li><strong>Garansi rasa</strong>Tidak cocok? Kami ganti varian lain.</li>
+      </ul>
+    </section>
+
+    <section id="produk" class="section">
+      <h2>Produk unggulan</h2>
+      <div class="grid" id="productGrid"></div>
+    </section>
+
+    <section id="testimoni" class="section">
+      <h2>Kata pelanggan</h2>
+      <div class="quotes">
+        <blockquote>Aromanya masih kuat sampai hari ke-14. Beda jauh dari kopi supermarket.<cite>Rina, Semarang</cite></blockquote>
+        <blockquote>Cocok untuk V60 maupun kopi susu. Sudah langganan tiga bulan.<cite>Dimas, Jakarta</cite></blockquote>
+        <blockquote>Pengiriman cepat dan ada catatan tanggal sangrai di kemasan.<cite>Alya, Yogyakarta</cite></blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer id="kontak" class="footer">
+    <div>
+      <strong>Kopi Lereng</strong>
+      <p>Semarang, Jawa Tengah</p>
+    </div>
+    <div>
+      <p>WhatsApp: <a href="https://wa.me/6281234567890">0812-3456-7890</a></p>
+      <p>Instagram: <a href="#">@kopilereng</a></p>
+    </div>
+    <small>&copy; 2026 Kopi Lereng</small>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>

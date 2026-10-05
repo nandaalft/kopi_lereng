@@ -1,0 +1,139 @@
+:root {
+  --bg: #eef1ea;
+  --ink: #17261f;
+  --forest: #1f3a2e;
+  --saffron: #e3a420;
+  --muted: #5b6b62;
+  --card: #ffffff;
+  --line: #d3dacd;
+  --light-roast: #c98f4b;
+  --dark-roast: #2a1a12;
+  --radius: 10px;
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #101a15;
+    --ink: #e8eee9;
+    --forest: #e3a420;
+    --muted: #9cabA1;
+    --card: #17261f;
+    --line: #28392f;
+  }
+}
+
+* { box-sizing: border-box; margin: 0; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; animation: none !important; } }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--saffron); outline-offset: 2px; }
+
+/* Navbar */
+.nav {
+  position: sticky; top: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: .75rem 1.25rem;
+  background: var(--bg);
+  border-bottom: 1px solid var(--line);
+}
+.logo { font-family: var(--font-display); font-weight: 800; font-size: 1.2rem; text-decoration: none; }
+.nav nav { display: none; gap: 1.5rem; }
+.nav nav a { text-decoration: none; color: var(--muted); }
+.nav nav a:hover { color: var(--ink); }
+.cart-btn {
+  font: inherit; font-weight: 500; cursor: pointer;
+  background: var(--forest); color: var(--bg);
+  border: 0; border-radius: 999px; padding: .45rem 1rem;
+}
+.cart-btn span { background: var(--saffron); color: #17261f; border-radius: 999px; padding: 0 .5rem; margin-left: .25rem; }
+
+/* Hero */
+.hero { max-width: 1000px; margin: 0 auto; padding: 4rem 1.25rem 3rem; }
+.hero h1 {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(2.4rem, 8vw, 5rem); line-height: 1.02; letter-spacing: -.03em;
+  max-width: 14ch;
+}
+.hero p { max-width: 48ch; margin: 1.25rem 0 1.75rem; color: var(--muted); font-size: 1.1rem; }
+.btn {
+  display: inline-block; text-decoration: none; font-weight: 700;
+  background: var(--saffron); color: #17261f;
+  padding: .85rem 1.6rem; border-radius: var(--radius);
+  transition: transform .15s;
+}
+.btn:hover { transform: translateY(-2px); }
+
+/* Roast strip: elemen khas halaman ini */
+.roast {
+  display: flex; justify-content: space-between; align-items: end;
+  margin-top: 3.5rem; height: 72px; padding: .5rem .9rem;
+  border-radius: var(--radius);
+  background: linear-gradient(90deg, var(--light-roast), #6b3f1d 55%, var(--dark-roast));
+  color: #fff; font-size: .85rem; font-weight: 500;
+}
+
+/* Sections */
+.section { max-width: 1000px; margin: 0 auto; padding: 3rem 1.25rem; }
+.section h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 4vw, 2.2rem); letter-spacing: -.02em; margin-bottom: 1.5rem; }
+
+.perks { list-style: none; padding: 0; display: grid; gap: 1.25rem; }
+.perks li { border-left: 3px solid var(--saffron); padding-left: 1rem; color: var(--muted); }
+.perks strong { display: block; color: var(--ink); font-size: 1.05rem; }
+
+/* Produk */
+.grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr; }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 1.25rem; display: flex; flex-direction: column; gap: .5rem;
+}
+.card .swatch { height: 90px; border-radius: 6px; margin-bottom: .5rem; }
+.card h3 { font-family: var(--font-display); font-size: 1.2rem; }
+.card .meta { color: var(--muted); font-size: .9rem; }
+.card .row { display: flex; justify-content: space-between; align-items: center; margin-top: auto; padding-top: .75rem; }
+.price { font-weight: 700; }
+.add {
+  font: inherit; font-weight: 500; cursor: pointer;
+  border: 1.5px solid var(--forest); background: transparent; color: var(--ink);
+  border-radius: 8px; padding: .4rem .9rem;
+}
+.add:hover { background: var(--forest); color: var(--bg); }
+
+/* Testimoni */
+.quotes { display: grid; gap: 1.25rem; }
+blockquote { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.25rem; }
+cite { display: block; margin-top: .75rem; font-style: normal; font-weight: 700; font-size: .9rem; color: var(--muted); }
+
+/* Footer */
+.footer {
+  display: grid; gap: 1rem; padding: 2.5rem 1.25rem;
+  background: var(--forest); color: #eef1ea;
+}
+@media (prefers-color-scheme: dark) { .footer { background: #17261f; } }
+.footer a { color: var(--saffron); }
+
+/* Toast */
+.toast {
+  position: fixed; left: 50%; bottom: 1.5rem; transform: translate(-50%, 150%);
+  background: var(--ink); color: var(--bg);
+  padding: .7rem 1.2rem; border-radius: 8px; transition: transform .25s;
+}
+.toast.show { transform: translate(-50%, 0); }
+
+/* Tablet ke atas */
+@media (min-width: 720px) {
+  .nav { padding: .75rem 3rem; }
+  .nav nav { display: flex; }
+  .perks { grid-template-columns: repeat(2, 1fr); }
+  .grid, .quotes { grid-template-columns: repeat(3, 1fr); }
+  .footer { grid-template-columns: 1fr 1fr auto; align-items: end; padding: 2.5rem 3rem; }
+}
