@@ -1,8 +1,9 @@
 // Data produk. Day 4 nanti dipindah ke js/products.js
 const products = [
-  { id: 1, name: "Ungaran Honey", origin: "Ungaran, Jawa Tengah", roast: "Light", price: 85000, color: "#c98f4b" },
-  { id: 2, name: "Temanggung Natural", origin: "Temanggung, Jawa Tengah", roast: "Medium", price: 78000, color: "#6b3f1d" },
-  { id: 3, name: "Gayo Wine", origin: "Aceh Tengah", roast: "Dark", price: 92000, color: "#2a1a12" },
+  { id: 1, name: "Kopi Gula Aren", origin: "Ungaran, Jawa Tengah", roast: "Light", price: 25000, color: "#c98f4b", image: "picture/gula_aren.jpg" },
+  { id: 2, name: "Kopi Coklat", origin: "Temanggung, Jawa Tengah", roast: "Medium", price: 28000, color: "#6b3f1d", image: "picture/kopi_coklat.jpg" },
+  { id: 3, name: "Gayo Wine", origin: "Aceh Tengah", roast: "Dark", price: 30000, color: "#2a1a12", image: "picture/robusta_gayo.jpg"},
+ 
 ];
 
 const formatRupiah = (n) =>
@@ -19,7 +20,7 @@ function renderProducts() {
     .map(
       (p) => `
       <article class="card">
-        <div class="swatch" style="background:${p.color}" aria-hidden="true"></div>
+        <div class="thumb" style="background:${p.color}"><img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.remove()"></div>
         <h3>${p.name}</h3>
         <p class="meta">${p.origin} &bull; Roast ${p.roast}</p>
         <div class="row">
