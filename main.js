@@ -2,7 +2,7 @@
 const products = [
   { id: 1, name: "Kopi Gula Aren", origin: "Ungaran, Jawa Tengah", roast: "Light", price: 25000, color: "#c98f4b", image: "picture/gula_aren.jpg" },
   { id: 2, name: "Kopi Coklat", origin: "Temanggung, Jawa Tengah", roast: "Medium", price: 28000, color: "#6b3f1d", image: "picture/kopi_coklat.jpg" },
-  { id: 3, name: "Gayo Wine", origin: "Aceh Tengah", roast: "Dark", price: 30000, color: "#2a1a12", image: "picture/robusta_gayo.jpg"},
+  { id: 3, name: "Gayo Wine", origin: "Aceh Tengah", roast: "Dark", price: 30000, color: "#2a1a12", image: "picture/robusta_Gayo.jpg"},
  
 ];
 
